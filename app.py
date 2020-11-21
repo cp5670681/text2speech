@@ -14,7 +14,7 @@ def index():
     msg = parse_message(xml)
     if msg.type == 'text':
         reply = TextReply(content=msg.content)
-        return reply
+        return reply.render()
     return ''
 
 
