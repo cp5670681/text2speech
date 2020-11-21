@@ -13,7 +13,7 @@ def index():
     print(xml)
     msg = parse_message(xml)
     if msg.type == 'text':
-        reply = TextReply(content=msg.content)
+        reply = TextReply(content=msg.content, message=msg)
         return reply.render()
     return ''
 
