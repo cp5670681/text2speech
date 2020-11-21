@@ -32,7 +32,7 @@ def get_access_token():
 
 def upload(text):
     access_token = get_access_token()
-    r = requests.get('http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text={}'.format(text))
+    r = requests.get('http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=5&text={}'.format(text))
     files = {
         'media': ('voice.mp3', io.BytesIO(r.content), 'application/audio/x-mpeg')
     }
